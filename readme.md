@@ -1,50 +1,98 @@
-Task tracker is a project used to track and manage your tasks. In this task, you will build a simple command line interface (CLI) to track what you need to do, what you have done, and what you are currently working on. This project will help you practice your programming skills, including working with the filesystem, handling user inputs, and building a simple CLI application.
+# Task Tracker Project
 
-Requirements
-The application should run from the command line, accept user actions and inputs as arguments, and store the tasks in a JSON file. The user should be able to:
+## Overview
 
-Add, Update, and Delete tasks
-Mark a task as in progress or done
-List all tasks
-List all tasks that are done
-List all tasks that are not done
-List all tasks that are in progress
-Here are some constraints to guide the implementation:
+The Task Tracker Project is a simple yet effective task management application that allows users to:
 
-You can use any programming language to build this project.
-Use positional arguments in command line to accept user inputs.
-Use a JSON file to store the tasks in the current directory.
-The JSON file should be created if it does not exist.
-Use the native file system module of your programming language to interact with the JSON file.
-Do not use any external libraries or frameworks to build this project.
-Ensure to handle errors and edge cases gracefully.
+- Add tasks
+- Update task descriptions
+- Delete tasks
+- Change task statuses
+- List tasks and filter them based on various criteria
 
-Task Properties
-Each task should have the following properties:
+The application is designed for easy management of daily tasks and ensures that task details are saved persistently in a JSON file.
 
-id: A unique identifier for the task
-description: A short description of the task
-status: The status of the task (todo, in-progress, done)
-createdAt: The date and time when the task was created
-updatedAt: The date and time when the task was last updated
-Make sure to add these properties to the JSON file when adding a new task and update them when updating a task.
+## Features
 
-Getting Started
-Here are a few steps to help you get started with the Task Tracker CLI project:
+✅ **Add Task**: Add new tasks with descriptions and given status or default status as 'todo'.
 
-Set Up Your Development Environment
-Choose a programming language you are comfortable with (e.g., Python, JavaScript, etc.).
-Ensure you have a code editor or IDE installed (e.g., VSCode, PyCharm).
-Project Initialization
-Create a new project directory for your Task Tracker CLI.
-Initialize a version control system (e.g., Git) to manage your project.
-Implementing Features
-Start by creating a basic CLI structure to handle user inputs.
-Implement each feature one by one, ensuring to test thoroughly before moving to the next e.g. implement adding task functionality first, listing next, then updating, marking as in progress, etc.
-Testing and Debugging
-Test each feature individually to ensure they work as expected. Look at the JSON file to verify that the tasks are being stored correctly.
-Debug any issues that arise during development.
-Finalizing the Project
-Ensure all features are implemented and tested.
-Clean up your code and add comments where necessary.
-Write a good readme file on how to use your Task Tracker CLI.
+✅ **Update Task**: Modify the description of an existing task.
+
+✅ **Delete Task**: Remove a task by its ID.
+ 
+✅ **Change Task Status**: Update the status of a task (e.g., 'todo', 'in progress', 'done').
+
+✅ **List Tasks**: Display all tasks with their details.
+
+✅ **Filter Tasks**: Filter tasks by status, description, or timestamps.
+
+## Installation
+
+**Step 1**: Clone the repository
+
+```sh
+git clone <repository_link>
+cd task-tracker
+```
+
+**Step 2**: Install dependencies
+
+```sh
+pip install -r requirements.txt
+```
+
+**Step 3**: Run the application
+
+```sh
+python task.py
+```
+
+## Usage
+
+### Add a Task
+
+Upon running the application, you will see the following menu:
+
+```
+Task Manager
+1. Add Task
+2. Update Task
+3. Delete Task
+4. Change Task Status
+5. List Tasks
+6. Get Task by ID
+7. Get Tasks by Status
+8. Get Tasks by Description
+9. Get Tasks by Created At
+10. Get Tasks by Updated At
+11. Exit
+```
+
+Simply follow the prompts to perform the desired actions.
+
+## Testing
+
+To run the test cases, make sure you have pytest installed. If not, you can install it by running:
+
+```sh
+pip install pytest
+```
+Then, run the following command to execute the test cases:
+
+```sh
+pytest test_task.py
+```
+
+## File Structure
+
+├── task.py            # Main application file  
+├── test_task.py       # Test cases for the application  
+├── task.json          # JSON file storing task data  
+├── requirements.txt   # Project dependencies  
+├── README.md          # Project documentation
+
+## Requirements
+
+Python 3.8+
+
+Pytest (for testing)
