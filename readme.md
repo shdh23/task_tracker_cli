@@ -97,4 +97,4 @@ Python 3.8+
 
 Pytest (for testing) 
 
-Reference : https://roadmap.sh/projects/task-tracker 
+Reference: https://roadmap.sh/projects/task-tracker 
